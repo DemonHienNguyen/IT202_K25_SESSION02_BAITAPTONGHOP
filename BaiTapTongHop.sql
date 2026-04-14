@@ -6,6 +6,9 @@ CREATE TABLE `BOOK`(
     `Book_Quanity` INT CHECK (`Book_Quanity` >= 0),
     `Book_Rent` DECIMAL(10,2) DEFAULT 5000
 );
+ALTER TABLE `BOOK` 
+	ADD COLUMN `Book_Date` DATE;
+
 CREATE TABLE `BORROW_BOOKS`(
 	`Borrow_Id` INT PRIMARY KEY AUTO_INCREMENT,
     `Book_Id` CHAR(5),
